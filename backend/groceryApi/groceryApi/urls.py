@@ -24,6 +24,8 @@ urlpatterns = [
     path('users', views.users, name="users"),
     path('g_lists', views.lists, name="lists"),
     path('login', views.login_page, name="login"),
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    path('list/<id>', views.grocery_list, name='list'),
+    path('add/<list_id>', views.add_item, name='add' ),
 
 ]

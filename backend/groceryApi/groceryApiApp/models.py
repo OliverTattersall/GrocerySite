@@ -17,7 +17,7 @@ class GroceryList(models.Model):
 
 class GroceryItem(models.Model):
     food = models.CharField()
-    list = models.ForeignKey(GroceryList, on_delete=models.CASCADE)
+    list = models.ForeignKey(GroceryList, related_name="items",on_delete=models.CASCADE)
 
     def __str__(self):
         return self.food
